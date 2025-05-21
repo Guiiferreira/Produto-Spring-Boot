@@ -4,7 +4,6 @@ import com.GuilhermeF.produtosapi.model.Produto;
 import com.GuilhermeF.produtosapi.repository.ProdutoRepository;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Optional;
 import java.util.UUID;
 
 @RestController
@@ -41,6 +40,13 @@ public class ProdutoController {
     @DeleteMapping("{id}")
     public void deletar (@PathVariable("id") String id){
         produtoRepository.deleteById(id);
+    }
+
+    @PutMapping("{id}")
+    public void atualizar (@PathVariable("id") String id,
+                           @RequestBody Produto produto ){
+        produto.setId(id);
+        produtoRepository.save(produto);
     }
 
 }
