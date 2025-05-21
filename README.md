@@ -1,4 +1,4 @@
-# Spring Boot 
+# Produtos 
 
 Este projeto é uma aplicação RESTful desenvolvida com Spring Boot, focada no gerenciamento de produtos.  
 Ele demonstra práticas avançadas de desenvolvimento backend, incluindo mapeamento JPA, integração com banco de dados e operações CRUD completas.
